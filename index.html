@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1E4E8C" />
+  <meta name="description" content="Oakridge Medical Group — Personalized Care for Every Stage of Life. Primary care, pediatrics, women's health, mental health, physical exams, and telehealth in Alexandria, VA." />
+  <title>Oakridge Medical Group — Personalized Care for Every Stage of Life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E4E8C'/%3E%3Cpath d='M16 6c2 4 5 5 5 9a5 5 0 01-10 0c0-4 3-5 5-9z' fill='%234BB3A7'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Emergency Notice -->
+  <div class="emergency-bar" id="emergencyBar" role="alert">
+    <div class="container emergency-inner">
+      <span class="emergency-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+      <p><strong>Medical emergency?</strong> Call <a href="tel:911">911</a> or visit the nearest emergency room.</p>
+      <button class="emergency-close" id="emergencyClose" aria-label="Dismiss notice">&times;</button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="Oakridge Medical Group home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="36" height="36"><rect width="32" height="32" rx="10" fill="url(#bg)"/><path d="M16 6c2.2 4.4 5.4 5.6 5.4 9.6a5.4 5.4 0 01-10.8 0c0-4 3.2-5.2 5.4-9.6z" fill="#fff"/><defs><linearGradient id="bg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#1E4E8C"/><stop offset="1" stop-color="#4BB3A7"/></linearGradient></defs></svg>
+        </span>
+        <span class="brand-text"><span class="brand-name">Oakridge</span><span class="brand-sub">Medical Group</span></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#appointments">Appointments</a>
+        <a href="#providers">Providers</a>
+        <a href="#location">Location</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
+        </button>
+        <button class="icon-btn" id="a11yToggle" aria-label="Accessibility options" title="Accessibility options">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><path d="M3.5 8h17M12 8v8M12 8l-3 8M12 8l3 8"/></svg>
+        </button>
+        <button class="btn btn-portal" id="portalBtn">Patient Portal</button>
+        <button class="btn btn-primary" data-book>Book Appointment</button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-img" data-parallax="0.18" src="images/Oakridge-outside.png" alt="" />
+        <span class="hero-scrim"></span>
+      </div>
+      <div class="container hero-content">
+        <span class="pill reveal"><span class="dot"></span> Now accepting new patients · Alexandria, VA</span>
+        <h1 class="reveal">Healthcare that<br><span class="grad-text">puts you first.</span></h1>
+        <p class="hero-sub reveal">Comprehensive care for individuals and families — pediatrics, preventive care, physical exams, women's health, mental health support, and virtual appointments.</p>
+        <div class="hero-cta reveal">
+          <button class="btn btn-primary btn-lg" data-book>Book Appointment</button>
+          <a href="#providers" class="btn btn-glass btn-lg">Meet Our Providers <span aria-hidden="true">→</span></a>
+        </div>
+        <ul class="trust-row reveal">
+          <li><span class="trust-ico"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Same-Day Appointments</li>
+          <li><span class="trust-ico"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Telehealth Available</li>
+          <li><span class="trust-ico"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Board-Certified Providers</li>
+          <li><span class="trust-ico"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> 4.9 Patient Satisfaction</li>
+        </ul>
+      </div>
+      <a href="#welcome" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ===== Stats strip ===== -->
+    <section class="stats-strip" id="stats">
+      <div class="container stats-grid">
+        <div class="stat reveal"><span class="stat-num" data-count="15000" data-suffix="+">0</span><span class="stat-label">Patients Served</span></div>
+        <div class="stat reveal d1"><span class="stat-num" data-count="20" data-suffix="+">0</span><span class="stat-label">Years Combined Experience</span></div>
+        <div class="stat reveal d2"><span class="stat-num" data-count="4.9" data-decimals="1" data-suffix="★">0</span><span class="stat-label">Average Patient Rating</span></div>
+        <div class="stat reveal d3"><span class="stat-num" data-count="8000" data-suffix="+">0</span><span class="stat-label">Telehealth Visits</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Welcome / About ===== -->
+    <section class="section" id="welcome">
+      <div class="container split">
+        <div class="split-media reveal-img">
+          <img data-parallax="0.08" src="images/Oakridge-front.png" alt="The bright, welcoming Oakridge Medical Group reception and waiting area" />
+          <div class="media-badge">
+            <span class="mb-num">20+</span>
+            <span class="mb-label">Years caring for<br>Alexandria families</span>
+          </div>
+        </div>
+        <div class="split-copy">
+          <span class="eyebrow reveal">Welcome to Oakridge</span>
+          <h2 class="reveal">A modern practice built around <span class="u-line">you</span></h2>
+          <p class="reveal">From the moment you walk in, everything is designed around comfort, clarity, and care. Our providers take the time to know you — so every visit feels personal, never rushed.</p>
+          <ul class="check-list reveal">
+            <li>Warm, welcoming spaces designed for every age</li>
+            <li>Same-day and next-day appointments</li>
+            <li>Transparent care plans you actually understand</li>
+            <li>Secure digital portal &amp; telehealth, always on</li>
+          </ul>
+          <div class="reveal"><button class="btn btn-primary" data-book>Become a Patient</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our Services</span>
+          <h2>Complete care, all in one place</h2>
+          <p class="section-lead">From your child's first checkup to lifelong preventive care, we support every stage of life with compassion and modern medicine.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal" tabindex="0">
+            <div class="svc-ico" style="--c:#4BB3A7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 21s-7-4.3-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.7-7 10-7 10z"/><path d="M12 8v4M10 10h4"/></svg></div>
+            <h3>Pediatrics</h3>
+            <p>Compassionate healthcare for infants, children, and adolescents.</p>
+            <ul class="svc-list"><li>Well-child visits</li><li>Immunizations</li><li>School physicals</li><li>Developmental screenings</li><li>Preventive pediatric care</li></ul>
+            <button class="svc-link" data-book>Book this service →</button>
+          </article>
+
+          <article class="service-card reveal d1" tabindex="0">
+            <div class="svc-ico" style="--c:#1E4E8C"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div>
+            <h3>Everyday &amp; Preventive Care</h3>
+            <p>Proactive healthcare focused on long-term wellness.</p>
+            <ul class="svc-list"><li>Annual wellness visits</li><li>Vaccinations</li><li>Health screenings</li><li>Chronic condition management</li><li>Preventive health plans</li></ul>
+            <button class="svc-link" data-book>Book this service →</button>
+          </article>
+
+          <article class="service-card reveal d2" tabindex="0">
+            <div class="svc-ico" style="--c:#6FBF73"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M9 2h6v3H9zM9 5v3a3 3 0 003 3 3 3 0 003-3V5"/><path d="M12 11v5a4 4 0 01-8 0v-1"/><circle cx="4" cy="15" r="2"/></svg></div>
+            <h3>Physical Exams</h3>
+            <p>Comprehensive exams for work, school, sports, and annual health.</p>
+            <ul class="svc-list"><li>Sports physicals</li><li>School physicals</li><li>Employment physicals</li><li>Annual physicals</li><li>Wellness assessments</li></ul>
+            <button class="svc-link" data-book>Book this service →</button>
+          </article>
+
+          <article class="service-card reveal" tabindex="0">
+            <div class="svc-ico" style="--c:#4BB3A7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m10 8 4 2.5-4 2.5z" fill="currentColor"/></svg></div>
+            <h3>Virtual / Online Care</h3>
+            <p>Convenient access to healthcare from anywhere.</p>
+            <ul class="svc-list"><li>Video consultations</li><li>Follow-up visits</li><li>Medication reviews</li><li>Minor illness treatment</li><li>Secure virtual appointments</li></ul>
+            <button class="svc-link" data-book>Book this service →</button>
+          </article>
+
+          <article class="service-card reveal d1" tabindex="0">
+            <div class="svc-ico" style="--c:#1E4E8C"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/></svg></div>
+            <h3>Women's Health</h3>
+            <p>Comprehensive care tailored to women's health needs.</p>
+            <ul class="svc-list"><li>Annual wellness exams</li><li>Preventive screenings</li><li>Family planning consultations</li><li>Hormonal health support</li><li>Menopause care</li></ul>
+            <button class="svc-link" data-book>Book this service →</button>
+          </article>
+
+          <article class="service-card reveal d2" tabindex="0">
+            <div class="svc-ico" style="--c:#6FBF73"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M9.5 2a4.5 4.5 0 00-4.4 5.5A4 4 0 006 15a3.5 3.5 0 006 2.5V4.5A2.5 2.5 0 009.5 2z"/><path d="M14.5 2a4.5 4.5 0 014.4 5.5A4 4 0 0118 15"/></svg></div>
+            <h3>Mental Health</h3>
+            <p>Integrated support for emotional and behavioral wellness.</p>
+            <ul class="svc-list"><li>Anxiety support</li><li>Depression screenings</li><li>Stress management</li><li>Behavioral health consultations</li><li>Mental wellness referrals</li></ul>
+            <button class="svc-link" data-book>Book this service →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feature band: Pediatrics ===== -->
+    <section class="feature-band">
+      <img class="band-img" data-parallax="0.12" src="images/Oakridge-pediatric.png" alt="A pediatrician examining a smiling child with their parent at Oakridge Medical Group" />
+      <span class="band-scrim"></span>
+      <div class="container band-content reveal">
+        <span class="eyebrow light">Family-Centered Care</span>
+        <h2>Care your whole family can grow with</h2>
+        <p>From first checkups to teenage milestones, our pediatric team makes every visit comfortable for kids and reassuring for parents.</p>
+        <button class="btn btn-light btn-lg" data-book>Book a Pediatric Visit</button>
+      </div>
+    </section>
+
+    <!-- ===== Appointments ===== -->
+    <section class="section" id="appointments">
+      <div class="container split">
+        <div class="split-copy">
+          <span class="eyebrow reveal">Online Scheduling</span>
+          <h2 class="reveal">Booking takes under a minute</h2>
+          <p class="reveal">Choose how you'd like to be seen and pick a time that works for you. New patients, existing patients, and virtual visits — all in one place.</p>
+          <div class="appt-feature-grid reveal">
+            <div class="appt-feature"><span class="af-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Schedule Appointment</div>
+            <div class="appt-feature"><span class="af-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> New Patient Registration</div>
+            <div class="appt-feature"><span class="af-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Existing Patient Portal</div>
+            <div class="appt-feature"><span class="af-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Virtual Visit Booking</div>
+            <div class="appt-feature"><span class="af-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Same-Day Requests</div>
+            <div class="appt-feature"><span class="af-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Pediatric Appointments</div>
+          </div>
+          <div class="reveal"><button class="btn btn-primary btn-lg" data-book>Start Booking</button></div>
+        </div>
+
+        <div class="booking-mock reveal-img" aria-hidden="true">
+          <div class="bm-head"><div class="bm-dots"><span></span><span></span><span></span></div><span class="bm-title">Book an appointment</span></div>
+          <div class="bm-body">
+            <span class="bm-label">Appointment type</span>
+            <div class="bm-chips">
+              <button class="bm-chip active">Annual Wellness</button><button class="bm-chip">Physical Exam</button><button class="bm-chip">Sick Visit</button><button class="bm-chip">Pediatric</button><button class="bm-chip">Women's Health</button><button class="bm-chip">Mental Health</button><button class="bm-chip">Telehealth</button>
+            </div>
+            <span class="bm-label">Provider</span>
+            <div class="bm-provider"><span class="bm-ava">SM</span><div><strong>Dr. Sarah Mitchell, MD</strong><small>Family Medicine · 15+ yrs</small></div><span class="bm-check">✓</span></div>
+            <span class="bm-label">Select a time · Thu, Jun 25</span>
+            <div class="bm-times"><button class="bm-time">8:30</button><button class="bm-time active">9:00</button><button class="bm-time">10:15</button><button class="bm-time">11:45</button><button class="bm-time">1:30</button><button class="bm-time">2:30</button></div>
+            <button class="bm-confirm">Confirm Appointment</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Personalized care feature (providers image) ===== -->
+    <section class="section section-alt" id="experience">
+      <div class="container split reverse">
+        <div class="split-media reveal-img">
+          <img data-parallax="0.08" src="images/Oakridge--providers.png" alt="An Oakridge physician discussing a treatment plan with a patient in the exam room" />
+          <div class="media-stat">
+            <strong>4.9★</strong><span>2,400+ patient reviews</span>
+          </div>
+        </div>
+        <div class="split-copy">
+          <span class="eyebrow reveal">The Oakridge Difference</span>
+          <h2 class="reveal">Time to listen. Expertise to help.</h2>
+          <p class="reveal">Great medicine starts with a real conversation. Our board-certified providers build lasting relationships, explain every option clearly, and partner with you on a plan that fits your life.</p>
+          <div class="mini-stats reveal">
+            <div><span class="stat-num" data-count="15000" data-suffix="+">0</span><small>Patients Served</small></div>
+            <div><span class="stat-num" data-count="8000" data-suffix="+">0</span><small>Telehealth Visits</small></div>
+            <div><span class="stat-num">Same-Day</span><small>Availability</small></div>
+          </div>
+          <div class="reveal"><a href="#providers" class="btn btn-primary">Meet the Team →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Providers ===== -->
+    <section class="section" id="providers">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Meet Our Providers</span>
+          <h2>Care from people who know you by name</h2>
+          <p class="section-lead">Board-certified physicians dedicated to building lasting relationships with the families they serve.</p>
+        </div>
+        <div class="providers-grid" id="providersGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Patient Portal ===== -->
+    <section class="section section-alt" id="portal">
+      <div class="container split">
+        <div class="split-media reveal-img" aria-hidden="true">
+          <div class="portal-window">
+            <div class="pw-top"><span class="pw-logo">Oakridge Portal</span><span class="pw-ava">JD</span></div>
+            <div class="pw-hero"><div><small>Welcome back,</small><strong>Jordan Doe</strong></div><span class="pw-pill">2 new results</span></div>
+            <div class="pw-tiles"><div class="pw-tile"><span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>Test Results</div><div class="pw-tile"><span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5"/><path d="M12 8.5v7"/></svg></span>Refills</div><div class="pw-tile"><span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>Messages</div><div class="pw-tile"><span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span>Visits</div></div>
+            <div class="pw-msg"><span class="pw-msg-ava">SM</span><div><strong>Dr. Mitchell</strong><small>Your labs look great — let's review at your next visit.</small></div></div>
+          </div>
+        </div>
+        <div class="split-copy">
+          <span class="eyebrow reveal">Patient Portal</span>
+          <h2 class="reveal">Your health, securely at your fingertips</h2>
+          <p class="reveal">Manage everything in one secure place, 24/7 — from any device.</p>
+          <ul class="portal-list reveal">
+            <li><span class="pl-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> View Test Results</li><li><span class="pl-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Secure Messaging</li><li><span class="pl-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Prescription Refills</li><li><span class="pl-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Appointment Management</li><li><span class="pl-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Medical Records Access</li><li><span class="pl-ico"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Telehealth Access</li>
+          </ul>
+          <div class="portal-actions reveal">
+            <button class="btn btn-primary" id="portalBtn2">Log In to Portal</button>
+            <button class="btn btn-ghost" data-refill>Request a Refill</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Location ===== -->
+    <section class="section" id="location">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Visit Us</span><h2>Conveniently located in the heart of Alexandria</h2></div>
+        <div class="location-grid">
+          <div class="map-wrap reveal-img">
+            <iframe title="Map to Oakridge Medical Group, Alexandria VA" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.0610%2C38.8040%2C-77.0380%2C38.8180&layer=mapnik&marker=38.8110%2C-77.0495" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a class="btn btn-primary map-directions" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=825+Oakridge+Boulevard+Alexandria+VA+22314">Get Directions →</a>
+          </div>
+          <div class="location-cards">
+            <div class="loc-card reveal"><h3>Oakridge Medical Group</h3><p>825 Oakridge Boulevard<br>Alexandria, VA 22314</p><p><a href="tel:+17035550184">(703) 555-0184</a><br><a href="mailto:hello@oakridgemedical.com">hello@oakridgemedical.com</a></p></div>
+            <div class="loc-card reveal d1"><h4>Office Hours</h4><ul class="hours"><li><span>Mon – Fri</span><strong>8:00 AM – 6:00 PM</strong></li><li><span>Saturday</span><strong>9:00 AM – 2:00 PM</strong></li><li><span>Sunday</span><strong class="closed">Closed</strong></li></ul></div>
+            <div class="loc-card reveal d2"><h4>Parking</h4><ul class="ticks"><li>Free patient parking garage</li><li>Handicap-accessible parking</li><li>EV charging stations</li><li>Bicycle parking</li></ul></div>
+            <div class="loc-card reveal d3"><h4>Public Transit</h4><ul class="ticks"><li>3-minute walk from Metro station</li><li>Multiple nearby bus routes</li><li>Dedicated rideshare pickup area</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Insurance ===== -->
+    <section class="section section-alt" id="insurance">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Insurance</span><h2>We accept most major insurance plans</h2></div>
+        <div class="insurance-grid reveal" id="insuranceGrid"></div>
+        <p class="insurance-note reveal">Please contact our office to verify coverage and eligibility.</p>
+        <div class="insurance-cta reveal"><button class="btn btn-ghost" id="verifyBtn">Verify My Insurance →</button></div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Patient Stories</span><h2>Loved by the families we serve</h2></div>
+        <div class="carousel reveal">
+          <div class="carousel-track" id="carouselTrack"></div>
+          <div class="carousel-controls"><button class="car-btn" id="carPrev" aria-label="Previous">‹</button><div class="car-dots" id="carDots"></div><button class="car-btn" id="carNext" aria-label="Next">›</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Questions, answered</h2></div>
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>Request an appointment</h2>
+          <p class="section-lead">Fill out the form and our team will reach out to confirm your visit — usually within one business day.</p>
+          <ul class="contact-info">
+            <li><span class="ci-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span> 825 Oakridge Boulevard, Alexandria, VA 22314</li>
+            <li><span class="ci-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg></span> <a href="tel:+17035550184">(703) 555-0184</a></li>
+            <li><span class="ci-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span> <a href="mailto:hello@oakridgemedical.com">hello@oakridgemedical.com</a></li>
+            <li><span class="ci-ico"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span> Mon–Fri 8–6 · Sat 9–2 · Sun Closed</li>
+          </ul>
+          <div class="newsletter">
+            <h4>Healthcare tips in your inbox</h4>
+            <form class="news-form" id="newsForm"><input type="email" placeholder="you@email.com" required aria-label="Email address" /><button class="btn btn-primary" type="submit">Subscribe</button></form>
+            <p class="news-msg" id="newsMsg" role="status"></p>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-img" id="contactForm" novalidate>
+          <div class="field"><label for="cf-name">Full Name</label><input id="cf-name" name="name" required /></div>
+          <div class="field-row">
+            <div class="field"><label for="cf-email">Email</label><input id="cf-email" type="email" name="email" required /></div>
+            <div class="field"><label for="cf-phone">Phone Number</label><input id="cf-phone" type="tel" name="phone" required /></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="cf-date">Preferred Date</label><input id="cf-date" type="date" name="date" /></div>
+            <div class="field"><label for="cf-service">Service Needed</label>
+              <select id="cf-service" name="service"><option value="">Select a service…</option><option>Annual Wellness Visit</option><option>Physical Exam</option><option>Sick Visit</option><option>Pediatric Appointment</option><option>Women's Health Consultation</option><option>Mental Health Consultation</option><option>Telehealth Visit</option></select>
+            </div>
+          </div>
+          <div class="field"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="4"></textarea></div>
+          <button class="btn btn-primary btn-lg" type="submit">Request an Appointment</button>
+          <p class="form-status" id="contactStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Social feed ===== -->
+    <section class="section" id="social">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">@OakridgeMedical</span><h2>Healthcare tips &amp; updates</h2></div>
+        <div class="social-feed reveal" id="socialFeed"></div>
+        <div class="social-links reveal">
+          <a href="#" class="soc">Facebook</a><a href="#" class="soc">Instagram</a><a href="#" class="soc">LinkedIn</a><a href="#" class="soc">YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Final CTA ===== -->
+    <section class="final-cta">
+      <div class="container final-inner reveal">
+        <h2>Ready to feel cared for?</h2>
+        <p>Same-day and telehealth appointments are available. Book in under a minute.</p>
+        <div class="hero-cta"><button class="btn btn-light btn-lg" data-book>Book Appointment</button><a href="tel:+17035550184" class="btn btn-glass btn-lg">Call (703) 555-0184</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <a href="#home" class="brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="36" height="36"><rect width="32" height="32" rx="10" fill="url(#bg2)"/><path d="M16 6c2.2 4.4 5.4 5.6 5.4 9.6a5.4 5.4 0 01-10.8 0c0-4 3.2-5.2 5.4-9.6z" fill="#fff"/><defs><linearGradient id="bg2" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#1E4E8C"/><stop offset="1" stop-color="#4BB3A7"/></linearGradient></defs></svg></span><span class="brand-text"><span class="brand-name">Oakridge</span><span class="brand-sub">Medical Group</span></span></a>
+        <p>Personalized Care for Every Stage of Life.</p>
+        <div class="social-links small"><a href="#" class="soc" aria-label="Facebook">Fb</a><a href="#" class="soc" aria-label="Instagram">Ig</a><a href="#" class="soc" aria-label="LinkedIn">In</a><a href="#" class="soc" aria-label="YouTube">Yt</a></div>
+      </div>
+      <div class="foot-col"><h5>Services</h5><a href="#services">Pediatrics</a><a href="#services">Preventive Care</a><a href="#services">Physical Exams</a><a href="#services">Women's Health</a><a href="#services">Mental Health</a><a href="#services">Telehealth</a></div>
+      <div class="foot-col"><h5>Practice</h5><a href="#providers">Providers</a><a href="#appointments">Appointments</a><a href="#location">Location</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+      <div class="foot-col"><h5>Patients</h5><a href="#" id="portalBtn3">Patient Portal</a><a href="#" data-refill>Prescription Refills</a><a href="#" id="verifyBtn2">Insurance Verification</a><a href="#contact">New Patients</a></div>
+      <div class="foot-col foot-contact"><h5>Contact</h5><p>825 Oakridge Boulevard<br>Alexandria, VA 22314</p><p><a href="tel:+17035550184">(703) 555-0184</a><br><a href="mailto:hello@oakridgemedical.com">hello@oakridgemedical.com</a></p></div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Oakridge Medical Group. All rights reserved.</p>
+      <p class="emergency-foot">Medical emergency? Call <a href="tel:911">911</a> immediately.</p>
+    </div>
+  </footer>
+
+  <!-- Floating book button -->
+  <button class="fab" data-book aria-label="Book an appointment"><span class="fab-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span><span class="fab-text">Book Appointment</span></button>
+
+  <!-- Live chat -->
+  <div class="chat" id="chat">
+    <button class="chat-toggle" id="chatToggle" aria-label="Open live chat"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.3 1.1 4.4 2.9 5.9L4 21l4.2-1.7c1.2.3 2.5.5 3.8.5 5.5 0 10-3.8 10-8.3S17.5 3 12 3z"/></svg><span class="chat-badge">1</span></button>
+    <div class="chat-panel" id="chatPanel" aria-hidden="true">
+      <div class="chat-head"><span class="chat-ava">O</span><div><strong>Oakridge Care Team</strong><small><span class="online-dot"></span>Typically replies in minutes</small></div><button class="chat-x" id="chatClose" aria-label="Close chat">&times;</button></div>
+      <div class="chat-body" id="chatBody">
+        <div class="chat-msg bot">Hi, welcome to Oakridge. Are you looking to book an appointment, refill a prescription, or ask a question?</div>
+        <div class="chat-quick"><button class="chat-q" data-book>Book appointment</button><button class="chat-q" data-refill>Refill Rx</button><button class="chat-q" data-q="hours">Office hours</button></div>
+      </div>
+      <form class="chat-input" id="chatForm"><input placeholder="Type a message…" aria-label="Message" /><button aria-label="Send">→</button></form>
+    </div>
+  </div>
+
+  <!-- Accessibility panel -->
+  <div class="a11y-panel" id="a11yPanel" aria-hidden="true">
+    <h4>Accessibility</h4>
+    <label class="a11y-row"><span>Larger text</span><input type="checkbox" id="a11yText"></label>
+    <label class="a11y-row"><span>High contrast</span><input type="checkbox" id="a11yContrast"></label>
+    <label class="a11y-row"><span>Reduce motion</span><input type="checkbox" id="a11yMotion"></label>
+    <label class="a11y-row"><span>Underline links</span><input type="checkbox" id="a11yLinks"></label>
+    <button class="a11y-reset" id="a11yReset">Reset</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-x" id="modalClose" aria-label="Close">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
